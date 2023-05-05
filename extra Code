@@ -1,0 +1,31 @@
+    #Setting gridlines,context and size of the figure
+'''
+sns.set_style('whitegrid')
+sns.set_context('talk')
+plt.figure(figsize=(20,10))
+plt.rcParams["axes.labelsize"]=15
+plt.rcParams["axes.titlesize"]=18
+plt.rcParams["axes.titlepad"]=18
+plt.rcParams["xtick.labelsize"]=10
+plt.subplots_adjust(left=0.08, bottom=0.26, right=0.96, top=0.92, wspace=0.2, hspace=0.2)
+
+    #Using barplot for catagorical visualization
+
+sns.barplot(x='States',y='Rolling Average',hue='Duration',data=top,palette='tab10')
+plt.xticks(rotation=90)
+
+    #Setting labels for axis and title
+
+plt.xlabel('State')
+plt.ylabel('(%)Average Growth')
+plt.title("States having Growth Greater than National Average")
+
+    #Setting Top and Bottom Values
+
+plt.ylim(top=30)
+plt.ylim(bottom=0)
+
+    #Executing
+
+plt.show()
+'''
